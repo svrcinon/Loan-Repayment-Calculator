@@ -11,7 +11,7 @@ Calculation of annuity payments, APR (Annual Percentage Rate) using the bisectio
 - Generates an amortization schedule and two charts (remaining debt, principal vs. interest split)
 
 
-## Pyhon
+## Python
 
 ### Use as a module
 ```
