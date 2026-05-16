@@ -14,7 +14,7 @@ Calculation of annuity payments, APR (Annual Percentage Rate) using the bisectio
 ## Pyhon
 
 ### Use as a module
-
+```
 from loan_repayment_calculator import Loan
 
 mortgage = Loan(
@@ -37,7 +37,7 @@ print("-" * 60)
 print("Output")
 print(f"Payment (no fees):        {mortgage.annuity_payment():>15,.4f} currency")
 print(f"APR:                      {apr_value:>15.6%}")
-
+```
 
 Supported payment_frequency values: weekly, monthly, quarterly,
 semiannual, annual.
