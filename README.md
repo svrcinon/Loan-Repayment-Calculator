@@ -10,6 +10,38 @@ Calculation of annuity payments, APR (Annual Percentage Rate) using the bisectio
 - Handles both one-off and recurring fees at different frequencies
 - Generates an amortization schedule and two charts (remaining debt, principal vs. interest split)
 
+
+## Pyhon
+
+### Use as a module
+
+from loan_repayment_calculator import Loan
+
+mortgage = Loan(
+    loan_amount=4_000_000,
+    num_payments=360,
+    annual_interest_rate=0.054,
+    payment_frequency="monthly",
+    origination_fee=4_000,
+    recurring_fees={"monthly": 150},  # account maintenance fee
+)
+
+print("-" * 60)
+print("Input")
+print(f"Loan amount:              {mortgage.loan_amount:>15,.2f} currency")
+print(f"Number of payments:       {mortgage.num_payments:>15d}")
+print(f"Nominal interest rate:    {mortgage.annual_interest_rate:>15.2%} p.a.")
+print(f"Payment frequency:        {mortgage.payment_frequency:>15s}")
+apr_value, iterations = mortgage.apr()
+print("-" * 60)
+print("Output")
+print(f"Payment (no fees):        {mortgage.annuity_payment():>15,.4f} currency")
+print(f"APR:                      {apr_value:>15.6%}")
+
+
+Supported payment_frequency values: weekly, monthly, quarterly,
+semiannual, annual.
+
 ## Excel
 The workbook "loan calculator.xlsx" contains four sheets:
 * APR and payment - Input fields are in the orange table in cells E4 to E21, H13 and H14. Everything else recalculates automatically. 
