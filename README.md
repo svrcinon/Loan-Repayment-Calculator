@@ -51,13 +51,13 @@ The workbook "loan calculator.xlsx" contains four sheets:
 
 
 ### How it works
-For an amortizing loan with equal monthly payments **A**, the payment amount is calculated as 
+For an amortizing loan with equal periodic payments **A**, the payment amount is calculated as 
 
 $$
 A = S \cdot \frac{r(1+r)^n}{(1+r)^n-1}
 $$
 
-where  **S** borrowed amount, **n** is total number of payments, **r** is interest rate per payment period.**r** is calculatzed as r = i / p , where **i** is annual interest rate (decimal form, e.g. 5% = 0.05), **p** is number of payments per year.
+where  **S** is borrowed amount, **n** is total number of payments, **r** is interest rate per payment period. **r** is calculated as r = i / p , where **i** is annual interest rate (decimal form, e.g. 5% = 0.05), **p** is number of payments per year.
 
 ---
 The APR is the rate **x** at which the present value of what the borrower
@@ -67,7 +67,7 @@ $$
 S = \sum_{k = 1}^{n} \left(A + F_k\right)\ (1+x)^{-k}
 $$
 
-where **F** is fee. This equation has no closed-form solution, so bisection is used for rate **x** on the
+where **F_k** is fee paid in period **k**. This equation has no closed-form solution, so bisection is used for rate **x** on the
 interval [10⁻¹⁰, 10].
 
 
