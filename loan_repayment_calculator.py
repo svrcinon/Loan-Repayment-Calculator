@@ -40,7 +40,7 @@ class Loan:
     annual_interest_rate: float = 0.054      # nominal p.a.
     payment_frequency: str = "monthly"       # key from FREQUENCY
 
-    # ONE-OFF FEES ()
+    # ONE-OFF FEES
     origination_fee: float = 4_000.0        # paid at t=0
     termination_fee: float = 0.0            # paid in the last period
 
