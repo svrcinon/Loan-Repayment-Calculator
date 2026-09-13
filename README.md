@@ -71,7 +71,7 @@ where **F_k** is fee paid in period **k**. This equation has no closed-form solu
 interval [10⁻¹⁰, 10].
 
 
-## Requirements for opening one or both files
-- Python 3.10+ (uses dict[str, float] and tuple[…] type hints) with pandas, matplotlib 
+## Requirements
+- **Python module**: Python 3.10+, `pip install -r requirements.txt`
 - LibreOffice / Excel to open .xlsx
 
