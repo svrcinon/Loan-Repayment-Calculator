@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 # In[13]:
 
 
@@ -10,8 +7,8 @@ using the bisection method, and the amortization schedule. Python equivalent
 of the Excel workbook.
 
 Usage:
-    python loan_calculator.py             # run with default parameters and plot
-    from loan_calculator import Loan      # or use as a module
+    python loan_repayment_calculator.py             # run with default parameters and plot
+    from loan_repayment_calculator import Loan      # or use as a module
 """
 
 from __future__ import annotations
